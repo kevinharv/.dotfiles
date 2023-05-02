@@ -1,31 +1,36 @@
-# .bashrc
+# .bashrc - Kevin Harvey - 20230502
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
+export MANPATH=/usr/local/man:/usr/man:/usr/share/man
+export HOST=`uname -n`
 
-# User specific environment
-if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
-then
-    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
-fi
-export PATH
+umask 066
+# ulimit -c 0		# Don't generate a core file
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+# Settings for interactive shells
+# To turn off the following settings comment it 
+export HISTCONTROL=ignoredups  # Ignore duplicate commands
+export HISTFILESIZE=40         # Remember the last 40 commands
+export HISTSIZE=40             
+set ignoreeof         # Prevents usage of Control-D from logging out
+# set noclobber         # Prevents '>' from overwriting files
+# set noglob            # Prevents wildcard expansion from taking place
+unset noglob
+# set notify            # Informs you when a background job terminates
 
-# User specific aliases and functions
-if [ -d ~/.bashrc.d ]; then
-	for rc in ~/.bashrc.d/*; do
-		if [ -f "$rc" ]; then
-			. "$rc"
-		fi
-	done
-fi
+# Some aliased ls commands
+alias   la='ls -la'
+alias   lc='ls -C'
+alias   ll='ls -l'
+alias   lz='ls -lZ'
+alias   lza='ls -laZ'
+#alias   ls='ls -F'
 
-unset rc
+# Prompt
+PS1='\[\e[0m\]\w \[\e[0m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0m\]\$\[\e[0m\]'
 
+
+# User Defined Specs
 export NVM_DIR="/home/kevin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 . "$HOME/.cargo/env"
