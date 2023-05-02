@@ -24,10 +24,11 @@ alias   lc='ls -C'
 alias   ll='ls -l'
 alias   lz='ls -lZ'
 alias   lza='ls -laZ'
+alias	ls='ls --color=auto'
 #alias   ls='ls -F'
 
 # Prompt
-PS1='\[\e[0m\]\w \[\e[0m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0m\]\$\[\e[0m\]'
+PS1='\[\e[0m\]\w \[\e[0m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0m\]\$\[\e[0m\] '
 
 
 # User Defined Specs
