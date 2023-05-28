@@ -28,8 +28,7 @@ alias	ls='ls --color=auto'
 #alias   ls='ls -F'
 
 # Prompt
-PS1='\[\e[0m\]\w \[\e[0m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0m\]\$\[\e[0m\] '
-
+PS1='\[\e[0;34m\]\w \[\e[0;31m\]$(git branch 2>/dev/null | grep '"'"'^*'"'"' | colrm 1 2) \[\e[0m\]\$\[\e[0m\] '
 
 # User Defined Specs
 export NVM_DIR="/home/kevin/.nvm"
