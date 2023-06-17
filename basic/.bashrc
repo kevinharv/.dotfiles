@@ -3,6 +3,7 @@
 export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
 export MANPATH=/usr/local/man:/usr/man:/usr/share/man
 export HOST=`uname -n`
+export EDITOR=/usr/bin/vim
 
 umask 066
 # ulimit -c 0		# Don't generate a core file
