@@ -1,6 +1,6 @@
 # .bashrc - Kevin Harvey - 20230502
 
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin:/home/kevin/.local/bin
+export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin:/home/kevin/.local/bin:~/nvim/bin:/usr/local/go/bin
 export MANPATH=/usr/local/man:/usr/man:/usr/share/man
 export HOST=`uname -n`
 export EDITOR=/usr/bin/vim
@@ -20,12 +20,12 @@ unset noglob
 # set notify            # Informs you when a background job terminates
 
 # Some aliased ls commands
-alias   la='ls -la'
-alias   lc='ls -C'
-alias   ll='ls -l'
-alias   lz='ls -lZ'
-alias   lza='ls -laZ'
-alias	ls='ls --color=auto'
+alias   la='ls -lAh'
+alias   lc='ls -Ch'
+alias   ll='ls -lh'
+alias   lz='ls -lZh'
+alias   lza='ls -lAZh'
+alias	ls='ls -lh --color=auto'
 #alias   ls='ls -F'
 alias   ap='ansible-playbook'
 alias   p='ping -c 1 '
@@ -48,4 +48,5 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
 . "$HOME/.cargo/env"
