@@ -43,16 +43,16 @@ __bash_prompt() {
 __bash_prompt
 
 # Base PATH
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
+# PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin
 
 # Add Rust Cargo
-PATH=$PATH:$HOME/.cargo/bin
+# PATH=$PATH:$HOME/.cargo/bin
 # Add VS Code
-PATH=$PATH:/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin
+# PATH=$PATH:/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin
 
 export PROMPT_DIRTRIM=4
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin:$HOME/.cargo/bin:/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin
-export PATH=$PATH
+# export PATH=$PATH
 export MANPATH=/usr/local/man:/usr/man:/usr/share/man
 export HOST=`uname -n`
 export EDITOR=/usr/bin/vim
@@ -78,4 +78,4 @@ alias   pip="python -m pip"
 # Configure Node Version Manager (NVM)
 export NVM_DIR="/home/kevin/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-. "$HOME/.cargo/env"
+# . "$HOME/.cargo/env"
