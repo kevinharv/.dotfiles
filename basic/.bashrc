@@ -49,6 +49,9 @@ __bash_prompt
 # PATH=$PATH:$HOME/.cargo/bin
 # Add VS Code
 # PATH=$PATH:/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin
+# Add Go to path
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:~/go/bin
 
 export PROMPT_DIRTRIM=4
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/ccs/bin:/sbin:/usr/sbin:/usr/local/openwin/bin:/usr/openwin/bin:$HOME/.cargo/bin:/mnt/c/Program\ Files/Microsoft\ VS\ Code/bin
