@@ -74,6 +74,7 @@ alias	ls='ls -lt --color=auto'
 alias   python="python3.11"
 alias   py="python"
 alias   pip="python -m pip"
+alias   v="nvim ."
 
 # Configure Node Version Manager (NVM)
 export NVM_DIR="/home/kevin/.nvm"
