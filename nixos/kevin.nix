@@ -50,4 +50,13 @@
       libreoffice-qt 
     ];
   };
+
+  #fonts.packages = with pkgs; [
+  #  fira-code
+  #  fira-code-symbols
+  #];
+
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+  ];
 }
