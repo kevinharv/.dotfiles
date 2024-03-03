@@ -201,3 +201,4 @@ bindsym Mod1+r mode "resize"
 default_border pixel 0
 gaps inner 15
 exec --no-startup-id picom -b --config ~/.config/picom/picom.conf
+exec --no-startup-id polybar
