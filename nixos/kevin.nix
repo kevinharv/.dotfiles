@@ -9,6 +9,7 @@
       # Editors
       vim
       neovim
+      vscode
 
       # Core Utilities
       coreutils
