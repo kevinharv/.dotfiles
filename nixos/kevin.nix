@@ -29,6 +29,8 @@
       pulseaudio
       playerctl
       polybar
+      xss-lock
+      i3lock
 
       # Development
       gnumake
