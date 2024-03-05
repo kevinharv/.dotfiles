@@ -21,6 +21,7 @@
       openssh
       stow
       killall
+      jq
 
       # GUI/DE
       rofi
